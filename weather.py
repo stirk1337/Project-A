@@ -24,3 +24,8 @@ def toprintweather():
 	currcity = getcity()
 	t = weather()
 	return currcity + " " + str(t[0])
+
+def gettemperature():
+	currcity = getcity()
+	t = weather()
+	return t[0]
