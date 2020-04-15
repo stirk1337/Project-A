@@ -19,3 +19,8 @@ def weather():
 		return weather
 	except:
 		return ["NA"]
+
+def toprintweather():
+	currcity = getcity()
+	t = weather()
+	return currcity + " " + str(t[0])

@@ -1,13 +1,11 @@
-from flask import Flask
+from flask import Flask, render_template, request
 from weather import getcity
 import weather
 app = Flask(__name__)
 
 @app.route('/')
 def Hello():
-	currcity = getcity()
-	t = weather.weather()
-	return currcity + " " + str(t[0])
+	return weather.toprintweather()
 
 if __name__ == '__main__':
 	app.run(debug=True)
